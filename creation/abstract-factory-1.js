@@ -26,10 +26,26 @@ take different models of cars, they all have to have doors, hoods and wheels mad
 
 // create the car class
 
-var Vehicle = class {
+class Vehicle {
     constructor(make, model, color){
         this.make = make;
         this.model = model;
         this.color = color;
     }
+
+    honk() {
+        return console.log(`I am a ${make} ${model} and I am ${color}`);
+    }
+}
+
+var cars = [];
+
+var carOne = new Vehicle('Holden','Barina','Red');
+var carTwo = new Vehicle('Holden','Barina','Blue');
+
+cars.push(carOne);
+cars.push(carTwo);
+
+for (car in cars) {
+    car.honk();
 }
