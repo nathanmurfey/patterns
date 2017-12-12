@@ -29,12 +29,23 @@ take different models of cars, they all have to have doors, hoods and wheels mad
 // this is the class that we are going to make different concrete versions of.
 
 class Vehicle {
-    constructor(make){
+    constructor(make) {
         this.make = make;
     }
 
     honk() {
         console.log(`I'm a ${this.make}.`);
+    }
+}
+
+class SmallVehicle extends Vehicle {
+    constructor(make) {
+        super(make);
+        this.numberOfWheels = 2;
+    }
+
+    honk() {
+        console.log(`I'm a ${this.make} and I have ${this.numberOfWheels} wheels.`);
     }
 }
 
