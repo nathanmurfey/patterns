@@ -29,14 +29,12 @@ take different models of cars, they all have to have doors, hoods and wheels mad
 // this is the class that we are going to make different concrete versions of.
 
 class Vehicle {
-    constructor(make, model, color){
+    constructor(make){
         this.make = make;
-        this.model = model;
-        this.color = color;
     }
 
     honk() {
-        console.log(`I'm a ${this.color} ${this.make}, ${this.model}`);
+        console.log(`I'm a ${this.make}.`);
     }
 }
 
@@ -47,28 +45,13 @@ class VehicleFactory {
 
     createHoldenBarinaRed(){
         // the new keyword considered harmful placed here
-        var car = new Vehicle('Holden', 'Barina', 'Red');
+        var car = new Vehicle('Holden');
         return car;
     }
 
     createHoldenBarinaBlue(){
-        var car = new Vehicle('Holden', 'Barina', 'Blue');
+        var car = new Vehicle('Holden');
         return car;
     }
 }
 
-// on change if you want to replace the range of products making sure
-// that the method calls are the same.
-var factory = new VehicleFactory();
-
-var cars = [];
-
-var carOne = factory.createHoldenBarinaBlue();
-var carTwo = factory.createHoldenBarinaRed();
-
-cars.push(carOne);
-cars.push(carTwo);
-
-cars.forEach(function(car) {
-    car.honk();
-});
