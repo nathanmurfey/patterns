@@ -26,6 +26,8 @@ take different models of cars, they all have to have doors, hoods and wheels mad
 
 // create the car class
 
+// this is the class that we are going to make different concrete versions of.
+
 class Vehicle {
     constructor(make, model, color){
         this.make = make;
@@ -34,18 +36,39 @@ class Vehicle {
     }
 
     honk() {
-        return console.log(`I am a ${make} ${model} and I am ${color}`);
+        console.log(`I'm a ${this.color} ${this.make}, ${this.model}`);
     }
 }
 
+class VehicleFactory {
+    constructor(){
+        console.log('Vehicle factory instatiated');
+    }
+
+    createHoldenBarinaRed(){
+        // the new keyword considered harmful placed here
+        var car = new Vehicle('Holden', 'Barina', 'Red');
+        return car;
+    }
+
+    createHoldenBarinaBlue(){
+        var car = new Vehicle('Holden', 'Barina', 'Blue');
+        return car;
+    }
+}
+
+// on change if you want to replace the range of products making sure
+// that the method calls are the same.
+var factory = new VehicleFactory();
+
 var cars = [];
 
-var carOne = new Vehicle('Holden','Barina','Red');
-var carTwo = new Vehicle('Holden','Barina','Blue');
+var carOne = factory.createHoldenBarinaBlue();
+var carTwo = factory.createHoldenBarinaRed();
 
 cars.push(carOne);
 cars.push(carTwo);
 
-for (car in cars) {
+cars.forEach(function(car) {
     car.honk();
-}
+});
