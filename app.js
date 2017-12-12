@@ -72,6 +72,15 @@ class BMWFactory extends VehicleFactory {
         super();
         console.log('I am a BMW vehicle factory');
     }
+
+    makeSmallVehicle(){
+        var smallBMWVehicle = new SmallVehicle('BMW');
+        return smallBMWVehicle;
+    }
+
+    makeLargeVehilce(){
+        var largeBMWVehilce = new LargeVehicle('BMW');
+    }
 }
 
 class HoldenFactory extends VehicleFactory {
