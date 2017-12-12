@@ -49,6 +49,18 @@ class SmallVehicle extends Vehicle {
     }
 }
 
+class LargeVehicle extends Vehicle {
+    constructor(make) {
+        super(make);
+        this.numberOfWheels = 4;
+    }
+
+    honk() {
+        console.log(`I'm a ${this.make} and I have ${this.numberOfWheels} wheels.`);
+    }
+}
+
+
 class VehicleFactory {
     constructor(){
         console.log('Vehicle factory instatiated');
@@ -66,3 +78,8 @@ class VehicleFactory {
     }
 }
 
+var motorbike = new SmallVehicle('BMW');
+var motorcar = new LargeVehicle('BMW');
+
+motorbike.honk();
+motorcar.honk();
