@@ -65,6 +65,16 @@ class VehicleFactory {
     constructor(){
         console.log('Vehicle factory instatiated');
     }
+
+    makeSmallVehicle(){
+        console.log('requires a non abstract factory class');
+        return false;
+    }
+
+    makeLargeVehilce(){
+        console.log('requires a non abstract factory class');
+        return false;
+    }
 }
 
 class BMWFactory extends VehicleFactory {
@@ -87,6 +97,15 @@ class HoldenFactory extends VehicleFactory {
     constructor() {
         super();
         console.log('I am a BMW vehilce factory');
+    }
+
+    makeSmallVehicle(){
+        var smallBMWVehicle = new SmallVehicle('BMW');
+        return smallBMWVehicle;
+    }
+
+    makeLargeVehilce(){
+        var largeBMWVehilce = new LargeVehicle('BMW');
     }
 }
 
