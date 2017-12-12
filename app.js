@@ -89,7 +89,8 @@ class BMWFactory extends VehicleFactory {
     }
 
     makeLargeVehilce(){
-        var largeBMWVehilce = new LargeVehicle('BMW');
+        var largeBMWVehicle = new LargeVehicle('BMW');
+        return largeBMWVehicle;
     }
 }
 
@@ -100,12 +101,13 @@ class HoldenFactory extends VehicleFactory {
     }
 
     makeSmallVehicle(){
-        var smallBMWVehicle = new SmallVehicle('BMW');
-        return smallBMWVehicle;
+        var smallHoldenVehicle = new SmallVehicle('BMW');
+        return smallHoldenVehicle;
     }
 
     makeLargeVehilce(){
-        var largeBMWVehilce = new LargeVehicle('BMW');
+        var largeHoldenVehicle = new LargeVehicle('BMW');
+        return largeHoldenVehicle;
     }
 }
 
