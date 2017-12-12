@@ -111,8 +111,16 @@ class HoldenFactory extends VehicleFactory {
     }
 }
 
-var motorbike = new SmallVehicle('BMW');
-var motorcar = new LargeVehicle('BMW');
+var vehicles = [];
 
-motorbike.honk();
-motorcar.honk();
+var factory = new HoldenFactory();
+
+var smallVehicle = factory.makeSmallVehicle();
+var largeVehicle = factory.makeLargeVehilce();
+
+vehicles.push(smallVehicle);
+vehicles.push(largeVehicle);
+
+vehicles.forEach(function(v){
+    v.honk();
+})
