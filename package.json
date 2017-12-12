@@ -1,0 +1,25 @@
+{
+  "name": "patterns",
+  "version": "1.0.0",
+  "main": "abstract-factory-1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node --presets es2015 app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nathanmurfey/patterns.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nathanmurfey/patterns/issues"
+  },
+  "homepage": "https://github.com/nathanmurfey/patterns#readme",
+  "description": ""
+}
