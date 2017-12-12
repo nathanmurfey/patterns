@@ -65,16 +65,19 @@ class VehicleFactory {
     constructor(){
         console.log('Vehicle factory instatiated');
     }
+}
 
-    createHoldenBarinaRed(){
-        // the new keyword considered harmful placed here
-        var car = new Vehicle('Holden');
-        return car;
+class BMWFactory extends VehicleFactory {
+    constructor() {
+        super();
+        console.log('I am a BMW vehicle factory');
     }
+}
 
-    createHoldenBarinaBlue(){
-        var car = new Vehicle('Holden');
-        return car;
+class HoldenFactory extends VehicleFactory {
+    constructor() {
+        super();
+        console.log('I am a BMW vehilce factory');
     }
 }
 
